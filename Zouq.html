@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ZOUQ Café in Bray - Experience authentic flavors, premium coffee, and warm hospitality. Book your table online or browse our menu.">
+    <meta name="keywords" content="café, coffee, Bray, authentic flavors, restaurant, booking, fresh food">
+    <meta name="author" content="ZOUQ Café">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ZOUQ Café - Authentic Flavors in Bray">
+    <meta property="og:description" content="Experience premium coffee and authentic cuisine in the heart of Bray">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zouqcafe.ie">
+    
+    <title>ZOUQ Café - Authentic Flavors in Bray</title>
+    
+    <!-- Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="Zouq.css">
+</head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Loading overlay -->
+    <div class="loading-overlay" id="loadingOverlay" aria-hidden="true">
+        <div class="loading-spinner" role="status" aria-label="Loading"></div>
+    </div>
+
+    <!-- Header -->
+    <header role="banner">
+        <nav class="container" role="navigation" aria-label="Main navigation">
+            <a href="#" class="logo" aria-label="ZOUQ Café Homepage">
+                <img src="logo.png" alt="ZOUQ Café Logo" class="logo-img">
+                <span>ZOUQ</span>
+            </a>
+            <ul class="nav-links" role="list">
+                <li role="listitem"><a href="#home" aria-label="Go to homepage">Home</a></li>
+                <li role="listitem"><a href="#about" aria-label="Learn about us">About</a></li>
+                <li role="listitem"><a href="#menu" aria-label="View our menu">Menu</a></li>
+                <li role="listitem"><a href="#popup" aria-label="Pop-up catering services">Pop-Up Services</a></li>
+                <li role="listitem"><a href="#contact" aria-label="Contact information">Contact</a></li>
+                <li role="listitem"><a href="#book" class="book-btn" aria-label="Book a table">Book Table</a></li>
+            </ul>
+            <button class="mobile-menu" onclick="toggleMenu()" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle mobile navigation menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero" role="banner" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-heading">Welcome to ZOUQ Café</h1>
+                    <p>Experience authentic flavors and warm hospitality in the heart of Bray</p>
+                    <div class="cta-buttons" role="group" aria-label="Main actions">
+                        <a href="#menu" class="btn btn-primary" role="button">View Menu</a>
+                        <a href="#book" class="btn btn-secondary" role="button">Book a Table</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Our Story</h2>
+                        <p>At ZOUQ Café, we’re more than just a coffee spot — we’re a place where culture, flavour, and community meet. Inspired by the Arabic word “zouq” meaning taste and style, our café brings a unique twist to Bray’s dining scene</p>
+                        <p>Since opening in March 2025, ZOUQ has become a local favourite, known for our specialty coffees, innovative matcha creations, and freshly prepared dishes made with love.</p>
+                        <p>Every dish tells a story, every cup is crafted with care, and every visit feels like coming home.</p>
+                    </div>
+                    <div class="about-image">
+                        <div style="width: 100%; height: 300px; background: linear-gradient(135deg, var(--primary-gold) 0%, var(--accent-orange) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+                            Beautiful Café Interior
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="menu">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Menu</h2>
+                    <p>Discover our carefully curated selection of authentic dishes and premium beverages</p>
+                </div>
+                
+                <div class="menu-categories">
+                    <div class="menu-category">
+                        <h3><i class="fas fa-coffee"></i> Coffee & Beverages</h3>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Signature ZOUQ Blend</span>
+                            <span class="menu-item-price">€3.50</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Artisan Cappuccino</span>
+                            <span class="menu-item-price">€3.20</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Golden Turmeric Latte</span>
+                            <span class="menu-item-price">€4.00</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Fresh Mint Tea</span>
+                            <span class="menu-item-price">€2.80</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-category">
+    <h3><i class="fas fa-leaf"></i> Matcha Specialties</h3>
+    <div class="menu-item">
+        <div class="menu-item-content">
+            <img src="matcha-latte.jpg" alt="Matcha Latte" class="menu-item-image">
+            <div class="menu-item-details">
+                <span class="menu-item-name">Premium Matcha Latte</span>
+                <span class="menu-item-description">Ceremonial grade matcha with steamed milk</span>
+            </div>
+        </div>
+        <span class="menu-item-price">€4.50</span>
+    </div>
+    <div class="menu-item">
+        <div class="menu-item-content">
+            <img src="matcha-cake.jpg" alt="Matcha Cake" class="menu-item-image">
+            <div class="menu-item-details">
+                <span class="menu-item-name">Matcha Cheesecake</span>
+                <span class="menu-item-description">Creamy matcha cheesecake with white chocolate</span>
+            </div>
+        </div>
+        <span class="menu-item-price">€6.20</span>
+    </div>
+    <div class="menu-item">
+        <div class="menu-item-content">
+            <img src="matcha-ice-cream.jpg" alt="Matcha Ice Cream" class="menu-item-image">
+            <div class="menu-item-details">
+                <span class="menu-item-name">Matcha Ice Cream</span>
+                <span class="menu-item-description">House-made matcha ice cream with red bean</span>
+            </div>
+        </div>
+        <span class="menu-item-price">€5.00</span>
+    </div>
+    <div class="menu-item">
+        <div class="menu-item-content">
+            <img src="matcha-tiramisu.jpg" alt="Matcha Tiramisu" class="menu-item-image">
+            <div class="menu-item-details">
+                <span class="menu-item-name">Matcha Tiramisu</span>
+                <span class="menu-item-description">Japanese twist on classic Italian dessert</span>
+            </div>
+        </div>
+        <span class="menu-item-price">€6.80</span>
+    </div>
+</div>
+
+                    <div class="menu-category">
+                        <h3><i class="fas fa-utensils"></i> Lunch & Dinner</h3>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Mediterranean Wrap</span>
+                            <span class="menu-item-price">€8.90</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Grilled Halloumi Salad</span>
+                            <span class="menu-item-price">€10.50</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Spiced Lamb Tagine</span>
+                            <span class="menu-item-price">€14.00</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Quinoa Power Bowl</span>
+                            <span class="menu-item-price">€9.50</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-category">
+                        <h3><i class="fas fa-cookie-bite"></i> Desserts & Treats</h3>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Baklava Selection</span>
+                            <span class="menu-item-price">€4.50</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Date & Walnut Cake</span>
+                            <span class="menu-item-price">€5.00</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Rosewater Panna Cotta</span>
+                            <span class="menu-item-price">€5.50</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Fresh Fruit Platter</span>
+                            <span class="menu-item-price">€4.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <a href="#contact" class="btn btn-primary">Download Full Menu</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pop-up Services Section -->
+        <section id="popup" class="popup-services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>ZOUQ Pop-Up Services</h2>
+                    <p>Bring the ZOUQ experience to your event with our professional catering and pop-up services</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Event Catering</h3>
+                        <p>Full-service catering for corporate events, weddings, and private parties</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Custom menu planning</li>
+                            <li><i class="fas fa-check"></i> Professional staff</li>
+                            <li><i class="fas fa-check"></i> Equipment provided</li>
+                            <li><i class="fas fa-check"></i> Setup & cleanup</li>
+                            <li><i class="fas fa-check"></i> 50-500 guests</li>
+                        </ul>
+                        <div style="text-align: center; color: var(--primary-gold); font-weight: 600; font-size: 1.2rem;">
+                            Starting from €15/person
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Mobile Coffee Bar</h3>
+                        <p>Professional barista service bringing premium coffee to your location</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Professional espresso machine</li>
+                            <li><i class="fas fa-check"></i> Certified baristas</li>
+                            <li><i class="fas fa-check"></i> Premium coffee beans</li>
+                            <li><i class="fas fa-check"></i> Alternative milk options</li>
+                            <li><i class="fas fa-check"></i> 2-8 hour service</li>
+                        </ul>
+                        <div style="text-align: center; color: var(--primary-gold); font-weight: 600; font-size: 1.2rem;">
+                            Starting from €250/day
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3>Pop-Up Restaurant</h3>
+                        <p>Complete pop-up restaurant experience at markets, festivals, and special events</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Mobile kitchen setup</li>
+                            <li><i class="fas fa-check"></i> Signature ZOUQ menu</li>
+                            <li><i class="fas fa-check"></i> Brand activation</li>
+                            <li><i class="fas fa-check"></i> Social media coverage</li>
+                            <li><i class="fas fa-check"></i> 1-7 day events</li>
+                        </ul>
+                        <div style="text-align: center; color: var(--primary-gold); font-weight: 600; font-size: 1.2rem;">
+                            Custom pricing
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Corporate Packages</h3>
+                        <p>Ongoing catering solutions for offices, meetings, and corporate events</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Weekly/monthly contracts</li>
+                            <li><i class="fas fa-check"></i> Meeting room service</li>
+                            <li><i class="fas fa-check"></i> Lunch & learn sessions</li>
+                            <li><i class="fas fa-check"></i> Dietary accommodations</li>
+                            <li><i class="fas fa-check"></i> Volume discounts</li>
+                        </ul>
+                        <div style="text-align: center; color: var(--primary-gold); font-weight: 600; font-size: 1.2rem;">
+                            Contact for quotes
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup-cta">
+                    <h3>Ready to Elevate Your Event?</h3>
+                    <p style="margin-bottom: 2rem;">Contact us for a custom quote and bring the authentic ZOUQ experience to your next gathering</p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="#contact" class="btn btn-primary">Get Quote</a>
+                        <a href="tel:+35312345678" class="btn btn-secondary">Call Now</a>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                        <h4 style="color: var(--primary-gold); margin-bottom: 1rem;">Recent Pop-Up Success</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: center;">
+                            <div>
+                                <div style="font-size: 2rem; color: var(--primary-gold); font-weight: bold;">150+</div>
+                                <div style="font-size: 0.9rem; opacity: 0.8;">Events Catered</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 2rem; color: var(--primary-gold); font-weight: bold;">5,000+</div>
+                                <div style="font-size: 0.9rem; opacity: 0.8;">Guests Served</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 2rem; color: var(--primary-gold); font-weight: bold;">98%</div>
+                                <div style="font-size: 0.9rem; opacity: 0.8;">Client Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Booking Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2>Visit Us</h2>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address:</strong><br>
+                                123 Main Street<br>
+                                Bray, Co. Wicklow<br>
+                                Ireland
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone:</strong><br>
+                                +353 1 234 5678
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong><br>
+                                hello@zouqcafe.ie
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Opening Hours:</strong><br>
+                                Mon-Fri: 7:00 AM - 9:00 PM<br>
+                                Sat-Sun: 8:00 AM - 10:00 PM
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3 id="book" style="color: var(--primary-gold); margin-bottom: 1.5rem;">Book a Table or Request Pop-Up Quote</h3>
+                        <form id="bookingForm" action="https://formspree.io/f/movlzydw" method="POST">
+                            <input type="hidden" name="_subject" value="New ZOUQ Café Booking Request">
+                            <input type="hidden" name="_captcha" value="false">
+                            <div class="form-group">
+                                <label for="serviceType">Service Type *</label>
+                                <select id="serviceType" name="serviceType" required aria-describedby="serviceType-help">
+                                    <option value="">Select Service</option>
+                                    <option value="table">Table Reservation</option>
+                                    <option value="catering">Event Catering</option>
+                                    <option value="coffee-bar">Mobile Coffee Bar</option>
+                                    <option value="popup">Pop-Up Restaurant</option>
+                                    <option value="corporate">Corporate Package</option>
+                                </select>
+                                <div id="serviceType-help" class="sr-only">Choose the type of service you're interested in</div>
+                                <div class="error-message" id="serviceType-error" role="alert"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required aria-describedby="name-help" autocomplete="name">
+                                <div id="name-help" class="sr-only">Enter your full name for the reservation</div>
+                                <div class="error-message" id="name-error" role="alert"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required aria-describedby="email-help" autocomplete="email">
+                                <div id="email-help" class="sr-only">We'll use this to confirm your booking</div>
+                                <div class="error-message" id="email-error" role="alert"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required aria-describedby="phone-help" autocomplete="tel">
+                                <div id="phone-help" class="sr-only">Include country code for international numbers</div>
+                                <div class="error-message" id="phone-error" role="alert"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Date *</label>
+                                <input type="date" id="date" name="date" required aria-describedby="date-help">
+                                <div id="date-help" class="sr-only">Select your preferred date</div>
+                                <div class="error-message" id="date-error" role="alert"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Time</label>
+                                <input type="time" id="time" name="time" aria-describedby="time-help">
+                                <div id="time-help" class="sr-only">Preferred time for your reservation</div>
+                                <div class="error-message" id="time-error" role="alert"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Number of Guests *</label>
+                                <input type="number" id="guests" name="guests" min="1" max="500" required aria-describedby="guests-help">
+                                <div id="guests-help" class="sr-only">How many people will be joining?</div>
+                                <div class="error-message" id="guests-error" role="alert"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Details & Special Requests</label>
+                                <textarea id="message" name="message" rows="4" aria-describedby="message-help" placeholder="For table bookings: dietary requirements, special occasions, etc.
+For pop-up services: event details, location, budget range, specific requirements"></textarea>
+                                <div id="message-help" class="sr-only">Additional information or special requests</div>
+                                <div class="error-message" id="message-error" role="alert"></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                Submit Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p>&copy; 2024 ZOUQ Café. All rights reserved. | Designed & Developed by Jana Taha</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
